@@ -213,6 +213,3 @@ All endpoints require `X-User-Id` header (sent automatically by the frontend aft
 
 ---
 
-## License
-
-MIT
