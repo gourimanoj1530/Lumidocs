@@ -1,0 +1,101 @@
+# ─────────────────────────────────────────────────────────
+#  .gitignore — Lumidocs AI Document Intelligence Platform
+#  Covers: Java/Maven, React/Vite/Node, Docker, IDE files
+# ─────────────────────────────────────────────────────────
+
+# ── Java / Maven ──────────────────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# ── Spring Boot ───────────────────────────────────────────
+backend/target/
+backend/src/main/resources/application-local.properties
+
+# ── Secrets — NEVER commit these ─────────────────────────
+application-secret.properties
+*.env
+.env
+.env.local
+.env.production
+secrets/
+
+# ── Node / React / Vite ───────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+*.local
+frontend/node_modules/
+frontend/dist/
+
+# Vite cache
+.vite/
+frontend/.vite/
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Docker ────────────────────────────────────────────────
+# Don't ignore docker-compose.yml — that should be committed
+# But ignore local override files
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ── IDE — IntelliJ IDEA ───────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ── IDE — VS Code ─────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+
+# ── IDE — Eclipse ─────────────────────────────────────────
+.eclipse/
+.classpath
+.project
+.settings/
+bin/
+
+# ── OS files ──────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── MinIO local data (if running outside Docker) ──────────
+minio-data/
+
+# ── Test output ───────────────────────────────────────────
+test-results/
+coverage/
+*.lcov
+
+# ── TypeScript build cache ────────────────────────────────
+*.tsbuildinfo
+
+# ── Misc ──────────────────────────────────────────────────
+*.swp
+*.swo
+*~
+.tmp/
+tmp/

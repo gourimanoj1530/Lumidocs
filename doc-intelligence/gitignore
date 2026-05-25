@@ -1,0 +1,32 @@
+# Environment — never commit real secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java / Spring Boot
+target/
+*.jar
+*.class
+
+# Node / React
+node_modules/
+dist/
+build/
+.next/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes (local data)
+postgres_data/
+minio_data/
+redis_data/

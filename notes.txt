@@ -1,0 +1,7 @@
+docker compose up -d
+mvnw.cmd spring-boot:run
+curl -X POST http://localhost:8080/api/documents/upload -H "X-User-Id: 00000000-0000-0000-0000-000000000001" -F "file=@C:\Users\Admin\Downloads\Cognizant.pdf"
+curl -X POST http://localhost:8080/api/chat -H "Content-Type: application/json" -H "X-User-Id: 00000000-0000-0000-0000-000000000001" -d "{\"question\":\"What is this document about?\",\"documentId\":null}"
+
+npm run dev
+

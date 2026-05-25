@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-brand-50: #f0f4ff;
+  --color-brand-100: #e0e9ff;
+  --color-brand-500: #4f6ef7;
+  --color-brand-600: #3b5bdb;
+  --color-brand-700: #2f4ac7;
+  --color-brand-900: #1a2d82;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ── Dark mode ────────────────────────────────────────────
+   Triggered by applyTheme() adding/removing .dark on <html>
+───────────────────────────────────────────────────────── */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Page backgrounds */
+html.dark .min-h-screen,
+html.dark [class*="bg-slate-50"] {
+  background-color: #0f172a !important;
+}
+
+html.dark [class*="bg-white"] {
+  background-color: #1e293b !important;
+}
+
+html.dark [class*="bg-slate-100"] {
+  background-color: #334155 !important;
+}
+
+/* Borders */
+html.dark [class*="border-slate-200"],
+html.dark [class*="border-slate-100"] {
+  border-color: #334155 !important;
+}
+
+/* Text */
+html.dark [class*="text-slate-800"] { color: #f1f5f9 !important; }
+html.dark [class*="text-slate-700"] { color: #e2e8f0 !important; }
+html.dark [class*="text-slate-600"] { color: #94a3b8 !important; }
+html.dark [class*="text-slate-400"] { color: #64748b !important; }
+
+/* Inputs */
+html.dark input,
+html.dark textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #475569 !important;
+}
+
+/* Hover overrides */
+html.dark [class*="hover:bg-slate-100"]:hover,
+html.dark [class*="hover:bg-slate-50"]:hover {
+  background-color: #334155 !important;
+}
+
+/* Modals and dropdowns */
+html.dark [class*="rounded-2xl"][class*="shadow"],
+html.dark [class*="rounded-3xl"] {
+  background-color: #1e293b !important;
+}
+
+/* Upload zone */
+html.dark [class*="border-dashed"] {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Shadow */
+html.dark [class*="shadow-sm"] {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
